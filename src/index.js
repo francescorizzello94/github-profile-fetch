@@ -5,13 +5,16 @@ import './index.css';
 import App from '../src/containers/App/App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
+import Repos from './containers/Repos/Repos';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path='/' element={<App />} />
+        <Route path="/" element={<App />} />
+        <Route path="/repositories" element={<Repos />} />
+        {/* <Route path="/repositories/:name" element={ <RepoCommits />} /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
