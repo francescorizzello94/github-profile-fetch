@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Link from "../components/Link/Link";
-import List from "../components/List";
+import Link from "../../components/Link/Link";
+import List from "../../components/List";
 import './Profile.css';
 
-function Profile({ gitHubName}) {
+function Profile({ gitHubName="holoplot"}) {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
 
@@ -16,16 +16,13 @@ function Profile({ gitHubName}) {
       value: <Link url={data.repos_url} title={ data.repos_url} />,
     },
     { field: 'name', value: data.name },
-    { field: 'company', value: data.company },
     { field: 'location', value: data.location },
-    { field: 'email', value: data.email },
-    { field: 'bio', value: data.bio },
   ]
 
 
   useEffect(() => {
     async function fetchData() {
-      const profile = await fetch("https://api.github.com/users/holoplot");
+      const profile = await fetch(`https://api.github.com/users/${gitHubName}`);
       const information = await profile.json();
 
       if (information) {
