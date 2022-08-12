@@ -1,8 +1,25 @@
 import React, { useEffect, useState } from "react";
+import Link from "../components/Link/Link";
+import List from "../components/List";
 
 function Profile({ gitHubName}) {
   const [data, setData] = useState({});
   const [loading, setLoading] = useState(true);
+
+  const items = [{
+    field: 'html_url',
+    value: <Link url={data.html_url} title={ data.html_url} />,
+  },
+    {
+      field: 'repos_url',
+      value: <Link url={data.repos_url} title={ data.repos_url} />,
+    },
+    { field: 'name', value: data.name },
+    { field: 'company', value: data.company },
+    { field: 'location', value: data.location },
+    { field: 'email', value: data.email },
+    { field: 'bio', value: data.bio },
+  ]
 
 
   useEffect(() => {
@@ -33,7 +50,7 @@ function Profile({ gitHubName}) {
             src={data.avatar_url}
             alt={data.name}
           />
-          {/* <List items={items} /> */}
+          <List items={items} />
         </div>
       )}
     </div>
