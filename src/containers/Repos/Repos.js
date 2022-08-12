@@ -30,10 +30,10 @@ function Repos({ gitHubName = "holoplot" }) {
       ) : (
         <div>
           <List
-            items={repos.map((project) => ({
-              field: repos.name,
+            items={repos.map((repo) => ({
+              field: repo.name,
               value: (
-                <RouterLink to={`/repos/${repos.name}`}>
+                <RouterLink to={`/repos/${repo.name}`}>
                   Repo
                 </RouterLink>
               ),
