@@ -1,17 +1,12 @@
 import React from "react";
 import './Header.css';
+import Link from "../Link/Link";
 
 const Header = ({ logo }) => (
   <header className="App-header">
     <img src={logo} className="App-logo" alt="logo" />
-    <a
-      className="App-link"
-      href="https://holoplot.com"
-      target="_blank"
-      rel="noopener noreferrer">
-      Learn about Holoplot
-    </a>
-    </header>
+    <Link url="https://holoplot.com" title="Holoplot" />
+  </header>
 )
 
 export default Header;
