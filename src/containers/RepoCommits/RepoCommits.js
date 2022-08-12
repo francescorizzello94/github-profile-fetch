@@ -7,7 +7,7 @@ const octokit = new Octokit({
 })
 
 function RepoCommits({ gitHubName = "holoplot" }) { 
-  const [repoCommit, setRepoCommit] = useState({});
+  const [repoCommit, setRepoCommit] = useState([]);
   const [loading, setLoading] = useState(true);
   const { name } = useParams();
 

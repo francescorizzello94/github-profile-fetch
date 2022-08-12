@@ -14,8 +14,8 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/repositories" element={<Repos />} />
-        <Route path="/repositories/:name" element={ <RepoCommits />} />
+        <Route path="/repos" element={<Repos />} />
+        <Route path="/repos/:name" element={ <RepoCommits />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
