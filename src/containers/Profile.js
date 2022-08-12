@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Link from "../components/Link/Link";
 import List from "../components/List";
+import './Profile.css';
 
 function Profile({ gitHubName}) {
   const [data, setData] = useState({});
