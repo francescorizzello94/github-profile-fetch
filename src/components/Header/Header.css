@@ -1,6 +1,7 @@
 .App-logo {
   height: 30vmin;
   pointer-events: none;
+  margin-bottom: 2rem;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -10,7 +11,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-image: url("./background.jpg");
   height: 80%;
   display: flex;
   align-items: center;
