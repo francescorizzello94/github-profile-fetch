@@ -33,7 +33,7 @@ function Profile({ gitHubName}) {
             src={data.avatar_url}
             alt={data.name}
           />
-          <List items={items} />
+          {/* <List items={items} /> */}
         </div>
       )}
     </div>
