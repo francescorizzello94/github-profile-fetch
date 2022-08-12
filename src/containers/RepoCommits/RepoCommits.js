@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
+import { Octokit, App } from "octokit";
+
+const octokit = new Octokit({
+  auth: 'personal-access-token123'
+})
 
 function RepoCommits({ gitHubName = "holoplot" }) { 
   const [repoCommit, setRepoCommit] = useState({});
@@ -8,8 +13,12 @@ function RepoCommits({ gitHubName = "holoplot" }) {
 
   useEffect(() => {
     async function fetchCommitData() {
-      const commit = await fetch(
-        `https://api.github.com/repos/${gitHubName}/${name}`,
+      const commit = await octokit.request(
+        `GET/https://api.github.com/repos/${gitHubName}/${name}/commits`,
+        {
+          owner: 'OWNER',
+          repo: 'REPO'
+        }
       );
       const commitInformation = commit.json();
 
@@ -32,7 +41,8 @@ function RepoCommits({ gitHubName = "holoplot" }) {
           ?
           <span>Loading...</span>
           :
-          <div></div>}
+          <div></div>
+      }
     </div>
   )
 }
