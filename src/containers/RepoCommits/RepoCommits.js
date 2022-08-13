@@ -1,26 +1,24 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import { Octokit, App } from "octokit";
+import { Octokit } from "octokit";
 
-const octokit = new Octokit({
-  auth: 'personal-access-token123'
-})
 
 function RepoCommits({ gitHubName = "holoplot" }) { 
   const [repoCommit, setRepoCommit] = useState([]);
   const [loading, setLoading] = useState(true);
+  const octokit = new Octokit({
+    auth: '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'
+  })
   const { name } = useParams();
+  const perPage = 20;
 
   useEffect(() => {
     async function fetchCommitData() {
-      const commit = await octokit.request(
-        `GET/https://api.github.com/repos/${gitHubName}/${name}/commits`,
-        {
-          owner: 'OWNER',
-          repo: 'REPO'
-        }
+      const fetchCommit = await octokit.request(
+        `GET /repos/{gitHubName}/{name}/commits`,
+        {per_page: perPage}
       );
-      const commitInformation = commit.json();
+      const commitInformation = fetchCommit.json();
 
       if (commitInformation) {
         setRepoCommit(commitInformation);
@@ -31,17 +29,25 @@ function RepoCommits({ gitHubName = "holoplot" }) {
     if (gitHubName && name) {
       fetchCommitData();
     }
-  }, [gitHubName, name]);
+  }, []);
 
   return (
     <div className="Commit-container">
-      <h2>Commit: {repoCommit.name}</h2>
+      <h2>Commit: </h2>
       {
         loading
           ?
           <span>Loading...</span>
           :
-          <div></div>
+          <div>
+            <ul>
+              {repoCommit.map(commit => (
+                <li key={commit.id}>
+                  {commit.author.name}: {commit.message}
+                </li>
+              ))}
+            </ul>
+          </div>
       }
     </div>
   )
