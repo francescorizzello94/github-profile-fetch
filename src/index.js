@@ -5,7 +5,6 @@ import './index.css';
 import App from '../src/containers/App/App';
 import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 import reportWebVitals from './reportWebVitals';
-import Repos from './containers/Repos/Repos';
 import RepoCommits from './containers/RepoCommits/RepoCommits';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -14,7 +13,6 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/repos" element={<Repos />} />
         <Route path="/repos/:name" element={ <RepoCommits />} />
       </Routes>
     </BrowserRouter>

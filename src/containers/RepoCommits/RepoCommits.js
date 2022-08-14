@@ -31,7 +31,7 @@ function RepoCommits({ gitHubName = "holoplot" }) {
   useEffect(() => {
     fetchCommitData();
 
-  }, []);
+  });
 
   return (
     <div className="Commit-container">
@@ -49,7 +49,8 @@ function RepoCommits({ gitHubName = "holoplot" }) {
                     <li className="repolist-item" key={commit.id}>
                       {commit.commit.author.name}: <br /> {commit.commit.message}
                     </li>
-                  )}
+                  )
+                }
                 )}
             </ul>
           </div>
