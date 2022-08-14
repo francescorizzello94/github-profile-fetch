@@ -1,4 +1,28 @@
-html,
-body {
-  background-color: white;
+:root {
+  --list-width: 26%;
+  --list-char-color: aliceblue;
+}
+
+.repocommits-general {
+  list-style: none;
+  width: var(--list-width);
+  margin: 0 auto;
+}
+
+.repocommits-general a {
+  color: aliceblue;
+}
+
+.repolist-item {
+  margin: 1.25rem;
+  padding: 0.3rem;
+  background-color: #0d0aac;
+  border: 1px solid #11beb6;
+  color: magenta;
+  overflow: hidden;
+}
+
+.repolist-item a {
+  color: var(--list-char-color);
+  text-decoration: none;
 }

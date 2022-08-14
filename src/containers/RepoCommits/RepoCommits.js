@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import { Octokit } from "octokit";
+import './RepoCommit.css';
 
 
 function RepoCommits({ gitHubName = "holoplot" }) {
@@ -34,19 +35,19 @@ function RepoCommits({ gitHubName = "holoplot" }) {
 
   return (
     <div className="Commit-container">
-      <h2>Commit: </h2>
+      <h2>Commit History (20 max) </h2>
       {
         loading
           ?
           <span>Loading...</span>
           :
           <div>
-            <ul>
+            <ul className="repocommits-general">
               {repoCommit
                 .map(commit => {
                   return (
-                    <li key={commit.id}>
-                      {commit.commit.author.name}: {commit.commit.message}
+                    <li className="repolist-item" key={commit.id}>
+                      {commit.commit.author.name}: <br /> {commit.commit.message}
                     </li>
                   )}
                 )}

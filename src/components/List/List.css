@@ -1,20 +1,19 @@
 :root {
-  --list-width: 30%;
+  --list-width: 26%;
   --list-char-color: aliceblue;
 }
 
-ul {
+.general-list-container {
   list-style: none;
   width: var(--list-width);
-  color: aliceblue;
   margin: 0 auto;
 }
 
-ul a {
-  color: yellow;
+.general-list-container a {
+  color: aliceblue;
 }
 
-li {
+.general-list-item {
   margin: 1.25rem;
   padding: 0.3rem;
   background-color: #0d0aac;
@@ -23,7 +22,7 @@ li {
   overflow: hidden;
 }
 
-li a {
+.general-list-item a {
   color: var(--list-char-color);
   text-decoration: none;
 }
