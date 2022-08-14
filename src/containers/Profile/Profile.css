@@ -3,3 +3,12 @@ body {
   background-color: rgb(0, 0, 0);
   color: white;
 }
+
+.Profile-container {
+  margin-top: 2rem;
+}
+
+.Profile-avatar {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
