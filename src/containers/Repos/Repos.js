@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link as RouterLink } from 'react-router-dom';
-import List from "../../components/List";
+import List from "../../components/List/List";
 
 
 function Repos({ gitHubName = "holoplot" }) { 

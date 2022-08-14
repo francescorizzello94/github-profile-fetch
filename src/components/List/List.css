@@ -1,0 +1,28 @@
+:root {
+  --list-width: 35%;
+  --list-char-color: aliceblue;
+  --list-margin: 0 auto;
+}
+
+ul {
+  list-style: none;
+  width: var(--list-width);
+  color: aliceblue;
+  margin: var(--list-margin);
+}
+
+ul a {
+  color: yellow;
+}
+
+li {
+  margin: 1.25rem;
+  padding: 0.3rem;
+  background-color: #0d0aac;
+  border: 1px solid #11beb6;
+  color: black;
+}
+
+li a {
+  color: var(--list-char-color);
+}

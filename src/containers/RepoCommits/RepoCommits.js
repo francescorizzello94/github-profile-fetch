@@ -42,12 +42,14 @@ function RepoCommits({ gitHubName = "holoplot" }) {
           :
           <div>
             <ul>
-              {repoCommit.map(commit => {
-                console.log(commit);
-               return ( <li key={commit.id}>
-                  {commit.commit.author.name}: {commit.commit.message}
-                </li>
-              )})}
+              {repoCommit
+                .map(commit => {
+                  return (
+                    <li key={commit.id}>
+                      {commit.commit.author.name}: {commit.commit.message}
+                    </li>
+                  )}
+                )}
             </ul>
           </div>
       }

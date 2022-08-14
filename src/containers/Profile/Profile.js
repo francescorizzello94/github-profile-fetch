@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Link from "../../components/Link/Link";
-import List from "../../components/List";
+import List from "../../components/List/List";
 import './Profile.css';
 
 function Profile({ gitHubName="holoplot"}) {
