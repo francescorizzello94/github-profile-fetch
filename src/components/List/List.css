@@ -1,14 +1,13 @@
 :root {
-  --list-width: 35%;
+  --list-width: 30%;
   --list-char-color: aliceblue;
-  --list-margin: 0 auto;
 }
 
 ul {
   list-style: none;
   width: var(--list-width);
   color: aliceblue;
-  margin: var(--list-margin);
+  margin: 0 auto;
 }
 
 ul a {
@@ -20,9 +19,11 @@ li {
   padding: 0.3rem;
   background-color: #0d0aac;
   border: 1px solid #11beb6;
-  color: black;
+  color: magenta;
+  overflow: hidden;
 }
 
 li a {
   color: var(--list-char-color);
+  text-decoration: none;
 }

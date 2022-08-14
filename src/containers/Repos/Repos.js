@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link as RouterLink } from 'react-router-dom';
 import List from "../../components/List/List";
+import './Repos.css';
 
 
 function Repos({ gitHubName = "holoplot" }) { 
@@ -24,7 +25,7 @@ function Repos({ gitHubName = "holoplot" }) {
 
   return (
     <div className="Projects-container">
-      <h2>Holoplot's Repositories</h2>
+      <h2 className="Repo-header">Holoplot's Repositories</h2>
       {loading ? (
         <span>Loading...</span>
       ) : (
@@ -34,6 +35,7 @@ function Repos({ gitHubName = "holoplot" }) {
               field: repo.name,
               value: (
                 <RouterLink to={`/repos/${repo.name}`}>
+                  <br />
                   Repo
                 </RouterLink>
               ),
