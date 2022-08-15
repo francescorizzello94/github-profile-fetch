@@ -54,8 +54,6 @@ function RepoCommits({ gitHubName = "holoplot" }) {
                       {commit.commit.author.name} <br />
                       email:{commit.commit.author.email} <br />
                       date:{commit.commit.author.date} <br />
-                      login:{commit.committer.login} <br />
-                      id:{commit.committer.id} <br />
                     </li>
                   )
                 }
