@@ -36,7 +36,7 @@ function Repos({ gitHubName = "holoplot" }) {
               value: (
                 <RouterLink to={`/repos/${repo.name}`}>
                   <br />
-                  Repo
+                  Commits
                 </RouterLink>
               ),
             }))}

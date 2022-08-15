@@ -3,15 +3,20 @@
   --list-char-color: aliceblue;
 }
 
+.Commit-container {
+  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 102, 0.5410539215686274) 72%, rgba(84, 47, 133, 0.711922268907563) 100%);
+}
+
 .commit-history-header {
   position: relative;
-  top: 0.5rem;
+  top: 35rem;
   margin-left: 2.5rem;
   font: 2em/1 Bodoni, serif;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 600;
+  font-size: x-large;
   letter-spacing: 0.2rem;
-  color: rgb(228, 21, 193);
+  color: goldenrod;
   text-align: left;
   animation: fadeIn 4s infinite alternate;
 }
@@ -36,9 +41,9 @@
 .repolist-item {
   margin: 1.25rem;
   padding: 0.3rem;
-  background-color: #0d0aac;
-  border: 1px solid #11beb6;
-  color: magenta;
+  background-color: #2c032a;
+  border: 1px solid #70108d;
+  color: goldenrod;
   overflow: hidden;
 }
 

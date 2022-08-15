@@ -35,7 +35,7 @@ function RepoCommits({ gitHubName = "holoplot" }) {
 
   return (
     <div className="Commit-container">
-      <h2 className="commit-history-header">{ name }'s Commit History <br/> (up to 20): </h2>
+      <h2 className="commit-history-header">{ name }'s Commit History </h2>
       {
         loading
           ?
