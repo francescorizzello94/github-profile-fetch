@@ -35,7 +35,7 @@ function RepoCommits({ gitHubName = "holoplot" }) {
 
   return (
     <div className="Commit-container">
-      <h2>Commit History (20 max) </h2>
+      <h2 className="commit-history-header">{ name }'s Commit History <br/> (up to 20): </h2>
       {
         loading
           ?
@@ -45,9 +45,11 @@ function RepoCommits({ gitHubName = "holoplot" }) {
             <ul className="repocommits-general">
               {repoCommit
                 .map(commit => {
+                  console.log(commit);
                   return (
                     <li className="repolist-item" key={commit.id}>
-                      {commit.commit.author.name}: <br /> {commit.commit.message}
+                      {commit.commit.author.name}: <br />
+                      {commit.commit.message}
                     </li>
                   )
                 }

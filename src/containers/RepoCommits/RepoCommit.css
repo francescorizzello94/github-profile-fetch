@@ -3,6 +3,26 @@
   --list-char-color: aliceblue;
 }
 
+.commit-history-header {
+  position: relative;
+  top: 0.5rem;
+  margin-left: 2.5rem;
+  font: 2em/1 Bodoni, serif;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  color: rgb(228, 21, 193);
+  text-align: left;
+  animation: fadeIn 4s infinite alternate;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+}
+
+
 .repocommits-general {
   list-style: none;
   width: var(--list-width);
