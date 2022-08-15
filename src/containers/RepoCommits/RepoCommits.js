@@ -48,8 +48,14 @@ function RepoCommits({ gitHubName = "holoplot" }) {
                   console.log(commit);
                   return (
                     <li className="repolist-item" key={commit.id}>
-                      {commit.commit.author.name}: <br />
-                      {commit.commit.message}
+                      commit message:<br /> <br/>
+                      {commit.commit.message} <br /><br />
+                      by <br/>
+                      {commit.commit.author.name} <br />
+                      email:{commit.commit.author.email} <br />
+                      date:{commit.commit.author.date} <br />
+                      login:{commit.committer.login} <br />
+                      id:{commit.committer.id} <br />
                     </li>
                   )
                 }
