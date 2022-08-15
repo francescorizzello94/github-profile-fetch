@@ -3,14 +3,11 @@
   --list-char-color: aliceblue;
 }
 
-.Commit-container {
-  background: radial-gradient(circle, rgba(2, 0, 36, 1) 0%, rgba(121, 9, 102, 0.5410539215686274) 72%, rgba(84, 47, 133, 0.711922268907563) 100%);
-}
 
 .commit-history-header {
   position: relative;
-  top: 35rem;
-  margin-left: 2.5rem;
+  margin: 2 auto;
+  margin-left: 1rem;
   font: 2em/1 Bodoni, serif;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 600;
@@ -51,3 +48,11 @@
   color: var(--list-char-color);
   text-decoration: none;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) {}
+
+/* Portrait */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {}
+
+/* Landscape */
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {}
